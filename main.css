@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cards {
+    display: flex;
+    width: 920px;
+    height: 500px;
+    border-radius: 6px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    flex-basis: 33.3333%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card .card-icon {
+    flex-shrink: 0;
+    height: 36px;
+    width: 110px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .card-title {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.card *:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.card .card-text {
+    line-height: 1.5;
+    min-height: 170px;
+    opacity: 0.6;
+}
+
+.card .button {
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #fff;
+    font-weight: bold;
+    border:2px solid #fff;
+}
+
+.sedans .button {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs .button {
+    color: hsl(184, 100%, 22%);
+}
+
+.luxury .button {
+    color:  hsl(179, 100%, 13%);
+}
+
+.card .button:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.sedans .card-icon {
+    background-image: url(images/icon-sedans.svg);
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.suvs .card-icon {
+    background-image: url(images/icon-suvs.svg);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.luxury .card-icon {
+    background-image: url(images/icon-luxury.svg);
+}
+
+@media (max-width: 700px) {
+    .container {
+        height: auto;
+    }
+    .cards {
+        flex-direction: column;
+        width: 310px;
+        height: auto;
+    }
+}
+
